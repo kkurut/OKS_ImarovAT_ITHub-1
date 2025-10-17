@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторная работа — Основы компьютерных сетей | Имаров Абдуллазим</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1a1a2e, #162447);
+      color: #eee;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #0f3460, #53354a);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      color: #00b4d8;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #d3d3d3;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: #00b4d8;
+      border-left: 5px solid #00b4d8;
+      padding-left: 10px;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    p, li {
+      line-height: 1.6;
+      font-size: 1em;
+      color: #eee;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+    }
+
+    .screenshot {
+      margin-bottom: 30px;
+    }
+
+    .screenshot p {
+      text-align: center;
+      font-style: italic;
+      color: #bbb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #0f3460, #53354a);
+      color: #bbb;
+      font-size: 0.9em;
+      box-shadow: 0 -4px 15px rgba(0,0,0,0.4);
+    }
+
+    .title-block {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .title-block h2 {
+      border: none;
+      font-size: 2em;
+      color: #00b4d8;
+      margin-bottom: 10px;
+    }
+
+    .title-block p {
+      font-size: 1.1em;
+      color: #ccc;
+      margin: 4px 0;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: #333;
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Основы компьютерных сетей</h1>
+    <p>Лабораторная работа №1 | Автор: Имаров Абдуллазим</p>
+  </header>
+
+  <main>
+    <section class="title-block">
+      <p><strong>Образовательная организация:</strong> <em>IThub</em></p>
+      <p><strong>Работа:</strong> Лабораторная работа №1 — Построение и настройка локальной сети</p>
+      <p><strong>Выполнил:</strong> Имаров Абдуллазим</p>
+      <p><strong>Группа: </strong>2ЭИТ</p>
+      <p><strong>Дата:</strong> 17.10.2025</p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>1. Цель работы</h2>
+      <p>Цель данной лабораторной работы — изучить основы построения локальной сети, освоить настройку сетевых устройств, маршрутизацию и проверку связности между узлами в среде Cisco Packet Tracer.</p>
+    </section>
+
+    <section>
+      <h2>2. Ход выполнения работы</h2>
+      <ul>
+        <li>Создана топология сети, включающая маршрутизатор, коммутаторы и конечные устройства (ПК);</li>
+        <li>Изменён hostname роутера на <strong>ImarovAT</strong> и подписаны все устройства на топологии;</li>
+        <li>Назначены IP-адреса с третьим октетом 15 в соответствии с порядковым номером в списке группы;</li>
+        <li>Настроена маршрутизация между подсетями;</li>
+        <li>Проверена связность с помощью команды <code>ping</code>.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Отчеты</h2>
+
+      <div class="screenshot">
+        <p>Рис. 1 — Полная топология сети в Cisco Packet Tracer</p>
+        <img src="/picture/topology.png" alt="Топология сети">
+      </div>
+
+      <div class="screenshot">
+        <p>Рис. 2 — Настройки IP-адресов для рабочих станций</p>
+        <img src="/picture/host1-ip.png" alt="Настройки IP-адресов на ПК">
+        <img src="/picture/host2-ip.png" alt="Настройки IP-адресов на ПК">
+        <img src="/picture/host3-ip.png" alt="Настройки IP-адресов на ПК">
+        <img src="/picture/host4-ip.png" alt="Настройки IP-адресов на ПК">
+      </div>
+
+      <div class="screenshot">
+        <p>Рис. 3 — Данные роутера</p>
+        <img src="/picture/R1-ip.png" alt="CLI роутера">
+      </div>
+
+      <div class="screenshot">
+        <p>Рис. 4 — Проверка связи между двумя подсетями с помощью команды ping</p>
+        <img src="/picture/host1-host3_test.png" alt="Результаты проверки связи">
+        <img src="/picture/host2-host4_test.png" alt="Результаты проверки связи">
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Изображение работающей топологии</h2>
+      <img src="/picture/topology-page.png" alt="Работающая топология сети">
+      <p style="text-align:center; font-style:italic;">Рис. 5 — Все устройства находятся в состоянии up/up, обмен пакетами проходит успешно</p>
+    </section>
+
+    <section>
+      <h2>5. Выводы</h2>
+      <p>В результате выполнения лабораторной работы была создана и настроена локальная сеть. Все устройства успешно подключены, маршрутизация работает корректно, а связность между подсетями подтверждена. Полученные навыки можно применять для проектирования и администрирования реальных сетей.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Имаров Абдуллазим | Основы компьютерных сетей</p>
+  </footer>
+</body>
+</html>
