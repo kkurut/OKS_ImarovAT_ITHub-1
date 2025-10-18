@@ -111,6 +111,37 @@
       background: #333;
       margin: 40px 0;
     }
+
+    /* NEW: download button styles */
+    .download-wrap {
+      text-align: center;
+      margin: 30px 0 10px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #00b4d8, #0077b6);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.55);
+    }
+
+    .note {
+      text-align: center;
+      color: #bbb;
+      font-size: 0.95em;
+      margin-top: 8px;
+    }
+
   </style>
 </head>
 <body>
@@ -181,6 +212,14 @@
     </section>
 
     <section>
+      <h2>Скачать материалы</h2>
+      <div class="download-wrap">
+        <a id="downloadLink" class="download-btn" href="./config/КТ_2ЭИТ_ИмаровАТ.pkt" download>Скачать топологию (PKT)</a>
+        <div class="note">Файл работающей топологии</div>
+      </div>
+    </section>
+
+    <section>
       <h2>5. Выводы</h2>
       <p>В результате выполнения лабораторной работы была создана и настроена локальная сеть. Все устройства успешно подключены, маршрутизация работает корректно, а связность между подсетями подтверждена. Полученные навыки можно применять для проектирования и администрирования реальных сетей.</p>
     </section>
@@ -189,5 +228,19 @@
   <footer>
     <p>© 2025 Имаров Абдуллазим | Основы компьютерных сетей</p>
   </footer>
+
+  <script>
+    (function(){
+      const link = document.getElementById('downloadLink');
+      if (!link) return;
+      const url = link.getAttribute('href');
+      fetch(url, { method: 'HEAD' }).then(res => {
+        if (!res.ok) {
+          document.querySelector('.note').textContent = 'Файл не найден на сервере — проверь ./files/otchet.pdf или путь в href.';
+        }
+      }).catch(() => {
+      });
+    })();
+  </script>
 </body>
 </html>
